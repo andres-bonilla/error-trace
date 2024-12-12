@@ -1,0 +1,42 @@
+{
+  "name": "error-trace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres-bonilla/error-trace.git"
+  },
+  "keywords": [
+    "traceability",
+    "error-tracking",
+    "trace-id",
+    "trace-flow",
+    "function-tracing"
+  ],
+  "author": "Andrés Bonilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andres-bonilla/error-trace/issues"
+  },
+  "homepage": "https://github.com/andres-bonilla/error-trace#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
