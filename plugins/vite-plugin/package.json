@@ -1,0 +1,39 @@
+{
+  "name": "@andres-bonilla/vite-plugin-error-trace",
+  "version": "1.0.1",
+  "description": "Vite Plugin for @andres-bonilla/error-trace",
+  "author": "Andrés Bonilla",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "watch": "tsc -b --watch",
+    "build": "tsc -b",
+    "test": "mocha --no-warnings --require ts-node/register 'tests/**/*.spec.ts'",
+    "lint": "eslint '**/*.{js,ts}'",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@andres-bonilla/error-trace": "file:../core"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.0"
+  },
+  "homepage": "https://github.com/andres-bonilla/error-trace#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres-bonilla/error-trace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andres-bonilla/error-trace/issues"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "error-trace",
+    "trace-id"
+  ]
+}

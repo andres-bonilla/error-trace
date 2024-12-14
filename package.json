@@ -1,42 +1,51 @@
 {
-  "name": "error-trace",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "name": "error-trace-monorepo",
+  "version": "1.0.1",
+  "description": "Library for create and manage error tracking with Trace ID.",
+  "author": "Andrés Bonilla",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "core",
+    "plugins/*"
+  ],
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "start": "node dist/index.js",
-    "format": "prettier --write .",
-    "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm --prefix ./core run start",
+    "start:vp": "npm --prefix ./plugins/vite-plugin run start",
+    "watch": "npm --prefix ./core run watch",
+    "watch:vp": "npm --prefix ./plugins/vite-plugin run watch",
+    "build": "npm --prefix ./core run build",
+    "build:vp": "npm --prefix ./plugins/vite-plugin run build",
+    "test": "npm --prefix ./core run test",
+    "test:vp": "npm --prefix ./plugins/vite-plugin run test",
+    "lint": "npm --prefix ./core run lint",
+    "lint:vp": "npm --prefix ./plugins/vite-plugin run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "clean": "npm --prefix ./core run clean && npm --prefix ./plugins/vite-plugin run clean"
   },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@types/chai": "^5.0.1",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.1.2",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mocha": "^10.5.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.13.0",
+    "mocha": "^11.0.1",
+    "prettier": "3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  },
+  "homepage": "https://github.com/andres-bonilla/error-trace#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andres-bonilla/error-trace.git"
   },
-  "keywords": [
-    "traceability",
-    "error-tracking",
-    "trace-id",
-    "trace-flow",
-    "function-tracing"
-  ],
-  "author": "Andrés Bonilla",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/andres-bonilla/error-trace/issues"
-  },
-  "homepage": "https://github.com/andres-bonilla/error-trace#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.16.0",
-    "eslint": "^9.16.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.13.0",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.0"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "name": "@andres-bonilla/error-trace",
+  "version": "1.0.1",
+  "description": "Library for create and manage error tracking with Trace ID.",
+  "author": "Andrés Bonilla",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "watch": "tsc --watch",
+    "build": "tsc -b",
+    "test": "mocha --no-warnings --require ts-node/register 'tests/**/*.spec.ts'",
+    "lint": "eslint '**/*.{js,ts}'",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "prettier": "3.4.2"
+  },
+  "homepage": "https://github.com/andres-bonilla/error-trace#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres-bonilla/error-trace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andres-bonilla/error-trace/issues"
+  },
+  "keywords": [
+    "traceability",
+    "error-tracking",
+    "trace-id",
+    "trace-flow",
+    "function-tracing"
+  ],
+  "files": [
+    "dist",
+    "../README.md",
+    "../LICENSE"
+  ]
+}
